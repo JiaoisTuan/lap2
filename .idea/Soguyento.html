@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính số nguyên tố </title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần hiển thị:"));
+    let count=0
+    let N = 2
+    while (count < numbers) {
+        // kiểm tra N có phải số nguyên tố không
+        let isPrime = true; // giả sử N là số nguyên tố trước
+        for (let i = 2; i <= Math.sqrt(N); i++) {
+            if (N % i === 0) {
+                isPrime = false; // N chia hết cho 1 số khác 1 và N
+                break; // không cần kiểm tra tiếp
+            }
+        }
+        if (isPrime) {
+            console.log(N); // in số nguyên tố ra màn hình
+            count++; // tăng số lượng số nguyên tố đã in
+        }
+        N++; // kiểm tra số tiếp theo
+    }
+    document.write(N + "<br>")
+
+
+
+
+
+</script>
+
+</body>
+</html>
